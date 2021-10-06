@@ -6,7 +6,7 @@ resetting the counter using ENMOD bit in GPT_CR register
 #include <Arduino.h>
 
 // interrupt function
-void GPT1_isr();
+void callback();
 
 // getting delay in restart mode
 void Delay_ms() {
@@ -18,7 +18,7 @@ void Delay_ms() {
 }
 
 // if interrupt enable
-void GPT1_isr() {
+void callback() {
   if (GPT1_SR & 0x01) {
     GPT1_SR |= (1 << 0); // clear flag
     Serial.println("hi1");
@@ -62,7 +62,7 @@ void GPT_init() {
 
   // handle interrupts
   // CM7 interrupts table
-  attachInterruptVector(100, GPT1_isr);
+  attachInterruptVector(100, callback);
   NVIC_ENABLE_IRQ(100);
 }
 
