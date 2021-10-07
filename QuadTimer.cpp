@@ -1,5 +1,5 @@
 /*
-A test of QuadTimer Teensy 4 library, RollOver Interrupt is not working :(
+A test of QuadTimer Teensy 4, RollOver Interrupt is not working :(
 */
 
 #include <Arduino.h>
