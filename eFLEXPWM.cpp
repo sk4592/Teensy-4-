@@ -1,5 +1,5 @@
 /*
-A test of eFlexPWM on pin 8 of Teensy 4.0
+A test of eFlexPWM on pin 4 of Teensy 4.0
 */
 
 #include <Arduino.h>
